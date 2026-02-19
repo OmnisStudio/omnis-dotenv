@@ -1,0 +1,7 @@
+If rxpos('^(?!\s*#)\s*(?<name>[^=\s]+)\s*=\s*(?:"(?<quoted>[^"]*)"|(?<unquoted>.*?))\s*$',pLine,kFalse,kFalse,lMatchen,lGroups)>0
+	If len(lGroups.quoted)
+		Do putenv(lGroups.name,lGroups.quoted)
+	Else If len(lGroups.unquoted)
+		Do putenv(lGroups.name,lGroups.unquoted)
+	End If
+End If

@@ -1,0 +1,12 @@
+Calculate lPath as FileOps.$joinpath(sys(115),".env")
+If FileOps.$doesfileexist(lPath)
+	Do FileOps.$readfile(lPath,lFileContent)
+	
+	Calculate lLines as split(lFileContent,kLf,kTrue)
+	For lLines.$line from 1 to lLines.$linecount step 1
+		If len(lLines.C1)
+			Do $cinst.$parseLine(lLines.C1)
+		End If
+	End For
+	
+End If
