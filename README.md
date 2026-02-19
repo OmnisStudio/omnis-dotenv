@@ -26,3 +26,6 @@ The `.env` file's content should be made up of multiple lines defining environme
 - You can create comment lines using a `#` as the first non-white-space character of a line.
 
 Using Omnis code, you can then obtain these values using the `getenv()` function.
+
+## Important!
+If they contain secrets, treat your *.env* files with utmost care, **do not commit them** to any source control.
